@@ -1,0 +1,230 @@
+# Candidate profile + search strategy.
+# Source: Alara_Dolunay_CV (Google Drive, 2026-09-01). Only professional facts;
+# no home address, fees or client contract terms belong in this file.
+
+candidate:
+  name: Alara Dolunay
+  headline: Growth Marketing | GTM Strategy & Execution
+  linkedin: https://www.linkedin.com/in/alaradolunay
+  base: Eskişehir, Türkiye
+  open_to: [Remote, Hybrid]
+  regions: [TR, EU, UK, MENA]
+  languages: [Turkish (native), English (professional, IELTS 2020)]
+  years_experience: 5
+  summary: >
+    Bilingual growth marketing operator with 5+ years helping early-stage B2B SaaS
+    and fintech founders go from first customers to repeatable growth. Owns strategy
+    through execution: positioning, pitch decks, HubSpot marketing/sales automation,
+    performance campaigns, founder-led LinkedIn content. Turkish market fluency plus
+    European B2B buyer understanding (Benelux, UK, EU expansion). MBA in Marketing.
+  experience:
+    - role: Growth Marketing Partner (Contract)
+      company: Mirsis Bilgi Teknolojileri
+      period: 2026-03 – present
+      points:
+        - Growth marketing partner on TurkiCore, a digital insurance infrastructure initiative for the Turkic world
+        - Market-entry strategy, positioning and partner engagement starting in Azerbaijan, extending to Kazakhstan, Kyrgyzstan, Northern Cyprus, Uzbekistan, Turkmenistan
+        - Owns LinkedIn marketing and cross-functional PM between tech team, regional partners and GTM stakeholders
+    - role: Fractional Growth Partner
+      company: Self-employed
+      period: 2025-11 – 2026-09
+      points:
+        - Fractional growth partner for early-stage B2B SaaS and fintech founders across TR, Benelux, UK, MENA
+        - Built ICP, positioning, pitch decks, channel/content strategy and HubSpot marketing/sales automation per engagement
+        - Ran performance marketing (Meta, Google, Apple Search Ads) and outbound pipeline operations for B2B SaaS clients
+    - role: Marketing Expert
+      company: kloia (B2B tech consultancy, London)
+      period: 2024-05 – 2025-04
+      points:
+        - Owned marketing strategy and execution: SEO, LinkedIn, content, demand generation for UK/EU markets
+        - Tracked channel performance and campaign ROI with SQL to steer budget allocation
+        - Aligned marketing with sales and delivery on business development priorities
+    - role: Senior Marketing Specialist
+      company: Peaka (SaaS data integration, SF Bay Area, hybrid)
+      period: 2023-12 – 2024-05
+      points:
+        - Led marketing execution for product launches and audience growth
+        - Worked directly with founders on GTM initiatives
+    - role: Marketing Manager
+      company: Makers Consulting (B2B consulting, Istanbul)
+      period: 2022-11 – 2023-12
+      points:
+        - End-to-end marketing ops: campaigns, content, LinkedIn; lead generation with BD
+    - role: Copywriter
+      company: TBWA\Worldwide (Istanbul)
+      period: 2020-05 – 2021-08
+      points:
+        - Brand and campaign copy for global and regional accounts
+  education:
+    - MBA, Marketing — Eskişehir Osmangazi University (2024)
+    - B.A. Film, Cinema & Video Studies — Anadolu University (2021)
+  certifications:
+    - IBM Product Manager Professional Certificate (2025)
+    - HubSpot Inbound Marketing
+    - Unilever Digital Marketing Analyst (2024)
+    - AWS Cloud Practitioner Essentials (2025)
+    - McKinsey Forward Talent Program (2022)
+    - CXL Account-Based Marketing (2022)
+  skills: [GTM strategy, growth strategy, positioning, market entry, ABM, performance marketing,
+           Google Ads, Meta Ads, LinkedIn Ads, SEO, content strategy, founder-led content,
+           lifecycle/email, HubSpot, Mixpanel, SQL, marketing analytics, pitch decks, outbound]
+
+# ---- Search strategy -------------------------------------------------------
+# Primary lane = roles where "strategy + hands-on execution at an early-stage B2B
+# company" is the job. Everything else is a distraction.
+search:
+  title_include:            # at least one must match the job title (case-insensitive)
+    - growth
+    - go-to-market
+    - gtm
+    - demand gen
+    - demand generation
+    - performance marketing
+    - marketing manager
+    - marketing lead
+    - head of marketing
+    - founding marketer
+    - product marketing
+    - b2b marketing
+    - digital marketing manager
+    - lifecycle marketing
+    - marketing operations
+    - partnerships manager
+  title_exclude:
+    - intern
+    - internship
+    - junior
+    - graduate
+    - engineer
+    - developer
+    - designer
+    - data scientist
+    - account executive
+    - sdr
+    - bdr
+    - recruiter
+    - chief
+    - vp
+    - vice president
+  # Locations that are OK for a person based in Türkiye.
+  location_ok:
+    - turkey
+    - türkiye
+    - turkiye
+    - istanbul
+    - ankara
+    - izmir
+    - eskişehir
+    - eskisehir
+    - emea
+    - europe
+    - worldwide
+    - anywhere
+    - global
+    - remote
+    - mena
+    - middle east
+    - utc+3
+    - cet
+  location_foreign:         # "Remote - <one of these>" is rejected unless a target region is also named
+    - us
+    - usa
+    - u.s.
+    - united states
+    - canada
+    - north america
+    - americas
+    - latam
+    - brazil
+    - mexico
+    - india
+    - apac
+    - australia
+    - singapore
+    - philippines
+    - new york
+    - san francisco
+  location_block:           # remote-but-restricted phrases
+    - us only
+    - usa only
+    - united states only
+    - us-based
+    - must be based in the us
+    - north america only
+    - canada only
+    - americas only
+    - latam only
+    - apac only
+    - us citizens
+    - security clearance
+  keyword_weights:          # description keywords → points (fit signal)
+    b2b: 6
+    saas: 6
+    fintech: 6
+    insurtech: 5
+    hubspot: 6
+    go-to-market: 5
+    gtm: 5
+    early-stage: 4
+    seed: 3
+    series a: 4
+    series b: 2
+    abm: 4
+    account-based: 4
+    linkedin: 3
+    demand generation: 4
+    pipeline: 3
+    positioning: 4
+    market entry: 5
+    expansion: 2
+    turkish: 8
+    türkiye: 6
+    turkey: 6
+    emea: 3
+    founder: 3
+    fractional: 3
+    mixpanel: 3
+    sql: 2
+    performance marketing: 4
+    google ads: 2
+    meta ads: 2
+  shortlist_min_rule_score: 35
+  max_llm_reviews_per_run: 25
+  max_age_days: 21
+
+# LinkedIn searches you open yourself (the agent builds the URLs; it does not log in).
+linkedin:
+  keywords:
+    - "Growth Marketing Manager"
+    - "Head of Growth"
+    - "GTM Manager"
+    - "Demand Generation Manager"
+    - "Product Marketing Manager B2B SaaS"
+    - "Founding Marketer"
+    - "Performance Marketing Manager"
+  locations: ["Turkey", "European Union", "United Kingdom", "EMEA"]
+  remote_only: true
+  posted_within_hours: 24
+
+# Public ATS boards (Greenhouse / Lever / Ashby). Slugs are the part of the
+# careers URL, e.g. boards.greenhouse.io/<slug>, jobs.lever.co/<slug>,
+# jobs.ashbyhq.com/<slug>. Add companies from your target list; bad slugs are
+# logged and skipped.
+companies:
+  greenhouse: []
+  lever: []
+  ashby: []
+
+# Aggregators with public feeds.
+aggregators:
+  remotive_categories: [marketing, sales-business]
+  remoteok_tags: [marketing, growth]
+  weworkremotely_feeds:
+    - https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss
+
+# Discipline guardrails — the agent refuses to draft beyond these per day.
+limits:
+  daily_applications: 10
+  daily_outreach: 15
+  followup_after_days: 5
+  second_followup_after_days: 7
